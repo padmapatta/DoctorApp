@@ -1,0 +1,12 @@
+{
+    "menu": {
+        "home": "Thuis", 
+        "ourdoctors": "Onze dokters"
+    },
+    "home" : { 
+        "search" : "Zoekopdracht",
+        "searchByDoctor" :  "Zoek op dokter",
+        "slide" : " Mijn dia {{page}} titel"
+    },
+    "chooselang": "Kies een taal"
+}

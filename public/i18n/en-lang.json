@@ -1,0 +1,12 @@
+{
+    "menu": {
+        "home": "Home", 
+        "ourdoctors": "Our Doctors"
+    },
+    "home" : {
+        "search" : "Search",
+        "searchByDoctor" : "Search by Doctor",
+        "slide" : " My slide {{page}} title"
+    },
+    "chooselang": "Choose Language"
+}
