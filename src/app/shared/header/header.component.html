@@ -1,22 +1,25 @@
-<header class="navbar navbar-expand navbar-dark px-4 flex-column flex-md-row">
-  <ul class="navbar-nav flex-row">
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/">{{ "menu.home" | translate }}</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/doctors">{{"menu.ourdoctors" | translate}}</a>
-    </li>
-  </ul>
-  <div class="demo-site-versions navbar-nav flex-row ms-md-auto me-4"></div>
-  <ul class="social-buttons navbar-nav flex-row d-none d-md-flex align-items-center">
-    <li> 
-        <select (change)="onLanguageChange($event)">
-        <option value="en">English</option>
-        <option value="nl">Dutch</option>
-        <option value="fr">French</option>
-      </select>
+<nav class="navbar navbar-expand-lg navbar-light bg-tempo mb-3">
+  <div class="container-fluid">
+    <a class="navbar-brand logo" [routerLink]="'.'">Medical Tour</a>
+    <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">&#9776;</button>
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+      <ul ngbNav class="navbar-nav me-auto">
+        <li [ngbNavItem]="link.url" *ngFor="let link of links">
+          <a ngbNavLink [routerLink]="link.url" (click)="isMenuCollapsed = true">{{link.title}}</a>
+        </li>
+      </ul>
+      <div ngbDropdown class="languagedropdown" display="dynamic" placement="bottom-end">
+        <a class="nav-link" tabindex="0" ngbDropdownToggle id="languagedropdown" role="button"> Dynamic </a>
+        <div ngbDropdownMenu aria-labelledby="languagedropdown" class="dropdown-menu">
+          <a ngbDropdownItem href="#" (click)="$event.preventDefault()" *ngFor="let lang of languages">{{lang.name}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
 
-    </li>
-  </ul>
-</header>
-
+<div class="sticky-wrapper">
+  <a class="social whatsapp" href="#"><i class="bi bi-whatsapp"></i></a>
+  <a class="social phone" href="#"><i class="bi bi-telephone"></i></a>
+  <a class="social email" href="#"><i class="bi bi-envelope"></i></a>
+</div>

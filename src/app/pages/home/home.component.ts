@@ -6,6 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-	images = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  images = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  doctors = [
+    { name: 'Dr Rajeev Varma',  exp: '15 year of experience', specilization: 'Orthopedic Surgeon', qualification: 'Senior Consultant, MBBS', avatar: 'https://www.alafiyameditour.com/wp-content/uploads/2020/02/dr.-5.jpg'},
+    { name: 'Dr Rajeev Varma',  exp: '15 year of experience', specilization: 'Orthopedic Surgeon', qualification: 'Senior Consultant, MBBS', avatar: 'https://www.alafiyameditour.com/wp-content/uploads/2020/02/dr.-5.jpg'},
 
+    { name: 'Dr Rajeev Varma',  exp: '15 year of experience', specilization: 'Orthopedic Surgeon', qualification: 'Senior Consultant, MBBS', avatar: 'https://www.alafiyameditour.com/wp-content/uploads/2020/02/dr.-5.jpg'}  ];
 }

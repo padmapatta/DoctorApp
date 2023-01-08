@@ -1,45 +1,36 @@
-<div class="col-md-12 mx-auto text-center">
-  <ngb-carousel
-    #carousel
-    [interval]="1500"
-    [pauseOnHover]="true"
-    [pauseOnFocus]="false"
-  >
-    <ng-template ngbSlide *ngFor="let img of images; index as i">
-      <div class="carousel-caption">
-        <h3>{{'home.slide' | translate: {page:i+1} }}</h3>
-      </div>
-      <a
-        href="https://www.google.fr/?q=Number+{{ i + 1 }}"
-        target="_blank"
-        rel="nofollow noopener noreferrer"
-      >
-        <div class="picsum-img-wrapper">
-          <img [src]="img" alt="My image {{ i + 1 }} description" />
-        </div>
-      </a>
-    </ng-template>
-  </ngb-carousel>
-
-
-
-  <form class="row justify-content-center" id="searchform">
-    <div class="form-group col-md-6">
-      <div class="input-group">
-        <input
-          id="1"
-          class="form-control"
-          type="text"
-          name="search"
-          placeholder="{{'home.searchByDoctor' | translate}}."
-          required
-        />
-        <span class="input-group-btn">
-          <button class="btn btn-success" type="submit">
-            <i class="glyphicon glyphicon-search" aria-hidden="true"></i> {{'home.search' | translate}}
-          </button>
-        </span>
+<main class="container">
+  <div class="row">
+    <div class="col">
+      <ngb-carousel #carousel [interval]="5000" [pauseOnHover]="true" [pauseOnFocus]="true">
+        <ng-template ngbSlide *ngFor="let img of images; index as i">
+          <div class="carousel-caption">
+            <h3>My slide {{i + 1}} title</h3>
+          </div>
+          <a href="https://www.google.fr/?q=Number+{{i+1}}" target="_blank" rel="nofollow noopener noreferrer">
+            <div class="picsum-img-wrapper">
+              <img class="carousel-img" [src]="img" alt="My image {{i + 1}} description" />
+            </div>
+          </a>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-8 mx-auto py-4">
+      <div class="input-group input-group-lg ">
+        <input class="form-control search-input border border-3 rounded-pill " type="search"
+          id="example-search-input" placeholder="Search by Doctor/Hospital">
+        <span class="input-group-text search"><i class="bi bi-search"></i></span>
       </div>
     </div>
-  </form>
-</div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 py-4 text-center border border-1" *ngFor="let doctor of doctors">
+      <img [src]="doctor.avatar" alt="" class="rounded-circle">
+      <h2 class="fw-normal">{{doctor.name}}</h2>
+      <p>{{doctor.qualification}}</p>
+      <p>{{doctor.specilization}}</p>
+      <p>{{doctor.exp}}</p>
+    </div>
+  </div>
+</main>

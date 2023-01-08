@@ -1,3 +1,65 @@
-header.navbar {
-    background: linear-gradient(135deg,#0143a3,#0273d4) ;
+.logo {
+    font-family: cursive;
+    font-size: 22px;
+    color: gold;
+    font-style: italic;
+    padding: 2px;
+    border-radius: 2px;
+    text-shadow: 10px 10px 5px lightblue;
+}
+.bg-tempo {
+    background-color: #36769B;
+    color: white;
+}
+.nav-link {
+    color: white;
+    border-radius: 0px;
+}
+.nav-link.active {
+    color: white;
+    border-bottom:2px solid white;
+}
+
+.navbar-toggler {
+    color: white;
+    border-color: white;
+}
+
+.languagedropdown {
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 3px 5px 3px 21px;
+    background-color: #295974;
+} 
+
+.sticky-wrapper {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    z-index:1000;
+}
+
+.sticky-wrapper .social{ 
+    height:30px;
+    width:30px;
+    padding:10px;
+    display:flex;
+    flex-direction:row;
+    border-radius:50%;
+    justify-content:center;
+    align-items:center; 
+    text-decoration:none;
+    color:#fff;
+    margin:2px;
+}
+.social.whatsapp {
+    background:#25D366    ;
+}
+
+.social.phone {
+    background:#ff9800    ;
+}
+
+.social.email {
+    background:#36769B    ;
 }
