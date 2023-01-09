@@ -2,13 +2,13 @@
   <div class="row">
     <div class="col">
       <ngb-carousel #carousel [interval]="5000" [pauseOnHover]="true" [pauseOnFocus]="true">
-        <ng-template ngbSlide *ngFor="let img of images; index as i">
+        <ng-template ngbSlide *ngFor="let testimonial of testimonials; index as i">
           <div class="carousel-caption">
-            <h3>My slide {{i + 1}} title</h3>
+            <h3>{{testimonial.title}}</h3>
           </div>
           <a href="https://www.google.fr/?q=Number+{{i+1}}" target="_blank" rel="nofollow noopener noreferrer">
             <div class="picsum-img-wrapper">
-              <img class="carousel-img" [src]="img" alt="My image {{i + 1}} description" />
+              <img class="carousel-img" [src]="testimonial.image" alt="" />
             </div>
           </a>
         </ng-template>

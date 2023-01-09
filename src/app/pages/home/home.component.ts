@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Doctors } from 'src/app/models/doctors';
+import { Testimonials } from 'src/app/models/testimonials';
+import { BrandingService } from 'src/app/services/branding.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +9,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  images = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/900/500`);
-  doctors = [
-    { name: 'Dr Rajeev Varma',  exp: '15 year of experience', specilization: 'Orthopedic Surgeon', qualification: 'Senior Consultant, MBBS', avatar: ''},
-    { name: 'Dr Rajeev Varma',  exp: '15 year of experience', specilization: 'Orthopedic Surgeon', qualification: 'Senior Consultant, MBBS', avatar: ''},
-    { name: 'Dr Rajeev Varma',  exp: '15 year of experience', specilization: 'Orthopedic Surgeon', qualification: 'Senior Consultant, MBBS', avatar: ''}  
-  ];
+  
+  testimonials: Testimonials[] = [] ;
+  doctors: Doctors[] = [] ;
+
+  constructor(private brandingService: BrandingService) {
+    this.brandingService.getDoctors().subscribe( res => {
+      this.doctors = res ;
+    });
+    this.brandingService.getTestimonials().subscribe( res => {
+      this.testimonials = res ;
+    });
+  }
 }
