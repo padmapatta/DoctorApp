@@ -9,9 +9,9 @@
         </li>
       </ul>
       <div ngbDropdown class="languagedropdown" display="dynamic" placement="bottom-end">
-        <a class="nav-link" tabindex="0" ngbDropdownToggle id="languagedropdown" role="button"> Dynamic </a>
+        <a class="nav-link" tabindex="0" ngbDropdownToggle id="languagedropdown" role="button"> {{currentLang?.name}} </a>
         <div ngbDropdownMenu aria-labelledby="languagedropdown" class="dropdown-menu">
-          <a ngbDropdownItem href="#" (click)="$event.preventDefault()" *ngFor="let lang of languages">{{lang.name}}</a>
+          <a ngbDropdownItem (click)="onLanguageChange(lang)" *ngFor="let lang of languages">{{lang.name}}</a>
         </div>
       </div>
     </div>
