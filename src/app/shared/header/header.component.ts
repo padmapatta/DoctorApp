@@ -11,11 +11,11 @@ import { LanguagesService } from 'src/app/services/languages.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  links = [
-    { title: 'Home', url: 'home' },
-    { title: 'Doctors', url: 'doctors' },
-    { title: 'Treatments', url: 'treatments' },
-    { title: 'Contact Us', url: 'contactus' },
+  menus = [
+    { title: 'menu.home', url: 'home' },
+    { title: 'menu.ourdoctors', url: 'doctors' },
+    { title: 'menu.treatments', url: 'treatments' },
+    { title: 'menu.contactUs', url: 'contactus' },
   ];
 
   languages: Language[] = [];

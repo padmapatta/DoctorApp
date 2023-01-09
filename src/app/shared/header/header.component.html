@@ -4,8 +4,8 @@
     <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">&#9776;</button>
     <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
       <ul ngbNav class="navbar-nav me-auto">
-        <li [ngbNavItem]="link.url" *ngFor="let link of links">
-          <a ngbNavLink [routerLink]="link.url" (click)="isMenuCollapsed = true">{{link.title}}</a>
+        <li [ngbNavItem]="menu.url" *ngFor="let menu of menus">
+          <a ngbNavLink [routerLink]="menu.url" (click)="isMenuCollapsed = true">{{menu.title | translate}}</a>
         </li>
       </ul>
       <div ngbDropdown class="languagedropdown" display="dynamic" placement="bottom-end">

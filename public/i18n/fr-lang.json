@@ -1,12 +1,12 @@
 {    
     "menu": {
         "home": "Domicile", 
-        "ourdoctors": "Nos médecins"
+        "ourdoctors": "Nos médecins",
+        "treatments": "Traitements",
+        "contactUs":"Nous contacter"
     },
     "home" : {
         "search" : "Chercher",
-        "searchByDoctor" : "Recherche par médecin",
-        "slide" : " Titre de ma diapositive {{page}}"
-    },
-    "chooselang": "Choisissez la langue"
+        "searchByDoctor" : "Recherche par médecin"
+    }
 }

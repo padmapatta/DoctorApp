@@ -1,12 +1,13 @@
 {
     "menu": {
         "home": "Home", 
-        "ourdoctors": "Our Doctors"
+        "ourdoctors": "Our Doctors",
+        "treatments": "Treatments",
+        "contactUs":"Contact Us"
     },
     "home" : {
         "search" : "Search",
-        "searchByDoctor" : "Search by Doctor",
-        "slide" : " My slide {{page}} title"
-    },
-    "chooselang": "Choose Language"
+        "searchByDoctor" : "Search by Doctor"       
+    }
+    
 }

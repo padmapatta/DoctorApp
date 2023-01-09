@@ -1,12 +1,12 @@
 {
     "menu": {
         "home": "Thuis", 
-        "ourdoctors": "Onze dokters"
+        "ourdoctors": "Onze dokters",
+        "treatments": "Behandelingen",
+        "contactUs":"Neem contact op"
     },
     "home" : { 
         "search" : "Zoekopdracht",
-        "searchByDoctor" :  "Zoek op dokter",
-        "slide" : " Mijn dia {{page}} titel"
-    },
-    "chooselang": "Kies een taal"
+        "searchByDoctor" :  "Zoek op dokter"
+    }
 }
